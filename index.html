@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Online scriptwriter with timer!">
+
+  <!-- JavaScript -->
+  <script defer src="main.js"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Title -->
+  <title>Timey Scriptwriter</title>
+</head>
+
+<body>
+  <main>
+    <section>
+        <h1>Finally, you can time your script as you type! &#129321; </h1>
+      <h3>Write or paste your brilliant script!</h3>
+      <form>
+        <textarea
+          cols="30"
+          rows="13"
+          placeholder=" I'm confident it will be amazing. &#129430; "
+        ></textarea>
+      </form>
+      <div>
+        <strong>Number of words:</strong>
+        <span id="word_count">0</span>
+      </div>
+      <div>
+        <strong>Estimated Time:</strong>
+        <span id="time_estimate">0</span> seconds
+      </div>
+
+
+
+
+<span class="slidecontainer">
+
+  <p>Words per minute:</p>
+  <input type="range" min="1" max="3" value="1" class="slider" id="myRange">
+
+</span>
+
+<form name="form_main">
+  <div>
+    <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>:<span id="millisecond">000</span>
+  </div>
+
+  <br />
+
+  <button type="button" name="start">start</button>
+  <button type="button" name="pause">pause</button>
+  <button type="button" name="reset">reset</button>
+</form>
+</section>
+    <h2>To do:</h2>
+      <ul>
+        <li>live updating time estimate display</li>
+        <li>wpm selector (slow, normal, fast, custom)</li>
+        <li>timer</li>
+        <li>robot voice narrator?</li>
+        <li>github reference</li>
+        <li>target time and coloring???</li>
+
+  </main>
+
+
+</body>
+</html>
