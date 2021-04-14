@@ -8,7 +8,7 @@ let wpm;
 // and calculate the total word
 const getTotalWord = (element) => {
   let text = element.value;
-  let totalWord = text.split(' ').length - 1;
+  let totalWord = text.split(' ').filter((str) => str !== "").length;
 
   return text === '' ? 0 : totalWord;
 }
@@ -28,13 +28,30 @@ textareaEl.addEventListener('keyup', () => {
 
 const getTotalTime = (element) => {
   let text = element.value;
-  let totalTime = text.split(' ').length - 1;
+  let totalTime = text.split(' ').filter((str) => str !== "").length;
+
+  // let totalTime = text.split(/ +/);
+
+  // let words = text.split(' ');
+
+  // let totalTime = 0;
+  // for (let i = 0; i < totalTime.length; i+= 1) {
+  //   let word = totalTime[i];
+  //   if (word !== "") {
+  //     totalTime = totalTime + 1;
+  //   }
+  // }
+  // for (let word in totalTime) {
+  //   if (word !== "") {
+  //     totalTime = totalTime + 1;
+  //   }
+  // }
 
   return text === '' ? 0 : totalTime * 0.48;
   }
 
 const setTimeEstimate = (element, value) => {
-  element.textContent = value;
+  element.textContent = Math.ceil(value);
 }
 
 textareaEl.addEventListener('keyup', () => {
