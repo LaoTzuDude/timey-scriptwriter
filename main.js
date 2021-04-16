@@ -125,7 +125,7 @@ if ('speechSynthesis' in window) {
  // Speech Synthesis supported 🎉
 }else{
   // Speech Synthesis Not Supported 😣
-  alert("Sorry, your browser doesn't support text to speech!");
+  alert("Just so you know, your browser doesn't support text to speech!");
 }
 
 // create a new speechSynthesis object, add required property and make our app talk👇
@@ -142,6 +142,6 @@ msg.voice = voices[10];
 msg.volume = 1; // From 0 to 1
 msg.rate = 1; // From 0.1 to 10
 msg.pitch = 0; // From 0 to 2
-msg.text = "Welcome to the scriptwriter, we love you!";
+msg.text = "";
 msg.lang = 'en';
 window.speechSynthesis.speak(msg);
